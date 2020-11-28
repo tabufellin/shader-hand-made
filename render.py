@@ -155,7 +155,8 @@ class Render(object):
               continue
           
         else:
-      
+          
+          
           f1 = face[0][0] - 1
           f2 = face[1][0] - 1
           f3 = face[2][0] - 1
@@ -169,6 +170,7 @@ class Render(object):
           ]
 
           normal = norm(cross(sub(vertices[0], vertices[1]), sub(vertices[1], vertices[2])))  
+          intensity = dot(normal, light)
           grey = round(255 * intensity)
 
           A, B, C, D = vertices 
